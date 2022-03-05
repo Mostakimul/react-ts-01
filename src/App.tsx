@@ -1,9 +1,9 @@
-import './App.css';
+import TheLayout from './views/pages/TheLayout';
 
 function App() {
   return (
-    <div className="App">
-      <h2>Hello pnpm + vite + ts</h2>
+    <div>
+      <TheLayout />
     </div>
   );
 }

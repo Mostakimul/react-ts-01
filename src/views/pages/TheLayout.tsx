@@ -4,7 +4,7 @@ import MainBody from "./common/MainBody";
 
 const TheLayout = () => {
   return (
-    <div>
+    <div className="container">
       <header>
         <Header />
       </header>

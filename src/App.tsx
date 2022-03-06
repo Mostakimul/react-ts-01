@@ -1,4 +1,4 @@
-import TheLayout from './views/pages/TheLayout';
+import TheLayout from "./views/pages/TheLayout";
 
 function App() {
   return (

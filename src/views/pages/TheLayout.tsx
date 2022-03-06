@@ -1,6 +1,6 @@
-import Footer from './common/Footer';
-import Header from './common/Header';
-import MainBody from './common/MainBody';
+import Footer from "./common/Footer";
+import Header from "./common/Header";
+import MainBody from "./common/MainBody";
 
 const TheLayout = () => {
   return (

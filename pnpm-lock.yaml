@@ -23,12 +23,14 @@ specifiers:
   tailwindcss: ^3.0.23
   typescript: ^4.5.4
   vite: ^2.8.0
+  vite-tsconfig-paths: ^3.4.1
 
 dependencies:
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-router-dom: 6.2.2_react-dom@17.0.2+react@17.0.2
   swiper: 8.0.7
+  vite-tsconfig-paths: 3.4.1_vite@2.8.4
 
 devDependencies:
   "@babel/core": 7.17.5
@@ -1753,6 +1755,13 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
+  /@cush/relative/1.0.0:
+    resolution:
+      {
+        integrity: sha512-RpfLEtTlyIxeNPGKcokS+p3BZII/Q3bYxryFRglh5H3A3T8q9fsLYm72VYAMEOOIBLEa8o93kFLiBDUWKrwXZA==,
+      }
+    dev: false
+
   /@eslint/eslintrc/1.2.0:
     resolution:
       {
@@ -1876,7 +1885,6 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: { integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4= }
-    dev: true
 
   /@types/minimatch/3.0.5:
     resolution:
@@ -2725,7 +2733,6 @@ packages:
         optional: true
     dependencies:
       ms: 2.1.2
-    dev: true
 
   /deep-is/0.1.4:
     resolution:
@@ -3772,6 +3779,13 @@ packages:
       is-glob: 4.0.3
     dev: true
 
+  /glob-regex/0.3.2:
+    resolution:
+      {
+        integrity: sha512-m5blUd3/OqDTWwzBBtWBPrGlAzatRywHameHeekAZyZrskYouOGdNB8T/q6JucucvJXtOuyHIn0/Yia7iDasDw==,
+      }
+    dev: false
+
   /glob/7.2.0:
     resolution:
       {
@@ -3818,6 +3832,13 @@ packages:
       merge2: 1.4.1
       slash: 3.0.0
     dev: true
+
+  /globrex/0.1.2:
+    resolution:
+      {
+        integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==,
+      }
+    dev: false
 
   /has-bigints/1.0.1:
     resolution:
@@ -4168,7 +4189,6 @@ packages:
     hasBin: true
     dependencies:
       minimist: 1.2.5
-    dev: true
 
   /json5/2.2.0:
     resolution:
@@ -4334,7 +4354,6 @@ packages:
       {
         integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==,
       }
-    dev: true
 
   /mri/1.2.0:
     resolution:
@@ -4353,7 +4372,6 @@ packages:
       {
         integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==,
       }
-    dev: true
 
   /multimatch/4.0.0:
     resolution:
@@ -4897,6 +4915,18 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /recrawl-sync/2.2.1:
+    resolution:
+      {
+        integrity: sha512-A2yLDgeXNaduJJMlqyUdIN7fewopnNm/mVeeGytS1d2HLXKpS5EthQ0j8tWeX+as9UXiiwQRwfoslKC+/gjqxg==,
+      }
+    dependencies:
+      "@cush/relative": 1.0.0
+      glob-regex: 0.3.2
+      slash: 3.0.0
+      tslib: 1.14.1
+    dev: false
+
   /regenerate-unicode-properties/10.0.1:
     resolution:
       {
@@ -5134,7 +5164,6 @@ packages:
         integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==,
       }
     engines: { node: ">=8" }
-    dev: true
 
   /source-map-js/1.0.2:
     resolution:
@@ -5212,7 +5241,6 @@ packages:
   /strip-bom/3.0.0:
     resolution: { integrity: sha1-IzTBjpx1n3vdVv3vfprj1YjmjtM= }
     engines: { node: ">=4" }
-    dev: true
 
   /strip-final-newline/2.0.0:
     resolution:
@@ -5335,14 +5363,12 @@ packages:
       json5: 1.0.1
       minimist: 1.2.5
       strip-bom: 3.0.0
-    dev: true
 
   /tslib/1.14.1:
     resolution:
       {
         integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==,
       }
-    dev: true
 
   /tsutils/3.21.0_typescript@4.5.5:
     resolution:
@@ -5450,6 +5476,23 @@ packages:
         integrity: sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==,
       }
     dev: true
+
+  /vite-tsconfig-paths/3.4.1_vite@2.8.4:
+    resolution:
+      {
+        integrity: sha512-SgK3/pnTuJ3i+gMSAWLR6VCPSw26bnxawrmXGvCDjJgk8MAQgmbCrFrAzfwbwZBXSqSuvWEuX04Wt73qJKx8fQ==,
+      }
+    peerDependencies:
+      vite: ">2.0.0-0"
+    dependencies:
+      debug: 4.3.3
+      globrex: 0.1.2
+      recrawl-sync: 2.2.1
+      tsconfig-paths: 3.13.0
+      vite: 2.8.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
 
   /vite/2.8.4:
     resolution:

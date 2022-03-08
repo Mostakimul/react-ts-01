@@ -1,6 +1,12 @@
-const ProductCard = ({ product }: { product: IProduct }) => {
+const ProductCard = ({
+  product,
+  onclick,
+}: {
+  product: IProduct;
+  onclick: (id: string | undefined) => void;
+}) => {
   return (
-    <div>
+    <div onClick={() => onclick(product._id)}>
       <div>
         <img
           src={import.meta.env.VITE_IMAGE_BASE_URL + product.image}

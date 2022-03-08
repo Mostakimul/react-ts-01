@@ -6,6 +6,7 @@ specifiers:
   "@babel/plugin-transform-react-jsx": ^7.14.901
   "@types/react": ^17.0.33
   "@types/react-dom": ^17.0.10
+  "@types/react-redux": ^7.1.23
   "@vitejs/plugin-react": ^1.0.7
   autoprefixer: ^10.4.2
   axios: ^0.26.0
@@ -19,7 +20,9 @@ specifiers:
   pretty-quick: ^3.1.3
   react: ^17.0.2
   react-dom: ^17.0.2
+  react-redux: ^7.2.6
   react-router-dom: "6"
+  redux: ^4.1.2
   swiper: ^8.0.7
   tailwindcss: ^3.0.23
   typescript: ^4.5.4
@@ -27,10 +30,13 @@ specifiers:
   vite-tsconfig-paths: ^3.4.1
 
 dependencies:
+  "@types/react-redux": 7.1.23
   axios: 0.26.0
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-redux: 7.2.6_react-dom@17.0.2+react@17.0.2
   react-router-dom: 6.2.2_react-dom@17.0.2+react@17.0.2
+  redux: 4.1.2
   swiper: 8.0.7
   vite-tsconfig-paths: 3.4.1_vite@2.8.4
 
@@ -1878,6 +1884,16 @@ packages:
       }
     dev: true
 
+  /@types/hoist-non-react-statics/3.3.1:
+    resolution:
+      {
+        integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==,
+      }
+    dependencies:
+      "@types/react": 17.0.39
+      hoist-non-react-statics: 3.3.2
+    dev: false
+
   /@types/json-schema/7.0.9:
     resolution:
       {
@@ -1907,7 +1923,6 @@ packages:
       {
         integrity: sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==,
       }
-    dev: true
 
   /@types/react-dom/17.0.11:
     resolution:
@@ -1918,6 +1933,18 @@ packages:
       "@types/react": 17.0.39
     dev: true
 
+  /@types/react-redux/7.1.23:
+    resolution:
+      {
+        integrity: sha512-D02o3FPfqQlfu2WeEYwh3x2otYd2Dk1o8wAfsA0B1C2AJEFxE663Ozu7JzuWbznGgW248NaOF6wsqCGNq9d3qw==,
+      }
+    dependencies:
+      "@types/hoist-non-react-statics": 3.3.1
+      "@types/react": 17.0.39
+      hoist-non-react-statics: 3.3.2
+      redux: 4.1.2
+    dev: false
+
   /@types/react/17.0.39:
     resolution:
       {
@@ -1927,14 +1954,12 @@ packages:
       "@types/prop-types": 15.7.4
       "@types/scheduler": 0.16.2
       csstype: 3.0.10
-    dev: true
 
   /@types/scheduler/0.16.2:
     resolution:
       {
         integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==,
       }
-    dev: true
 
   /@typescript-eslint/eslint-plugin/5.13.0_1e08a597a4fb107867dcbe827a94038a:
     resolution:
@@ -2706,7 +2731,6 @@ packages:
       {
         integrity: sha512-2u44ZG2OcNUO9HDp/Jl8C07x6pU/eTR3ncV91SiK3dhG9TWvRVsCoJw14Ckx5DgWkzGA3waZWO3d7pgqpUI/XA==,
       }
-    dev: true
 
   /damerau-levenshtein/1.0.8:
     resolution:
@@ -3923,6 +3947,15 @@ packages:
       "@babel/runtime": 7.17.2
     dev: false
 
+  /hoist-non-react-statics/3.3.2:
+    resolution:
+      {
+        integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==,
+      }
+    dependencies:
+      react-is: 16.13.1
+    dev: false
+
   /human-signals/1.1.1:
     resolution:
       {
@@ -4829,7 +4862,6 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
-    dev: true
 
   /pump/3.0.0:
     resolution:
@@ -4883,7 +4915,38 @@ packages:
       {
         integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==,
       }
-    dev: true
+
+  /react-is/17.0.2:
+    resolution:
+      {
+        integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==,
+      }
+    dev: false
+
+  /react-redux/7.2.6_react-dom@17.0.2+react@17.0.2:
+    resolution:
+      {
+        integrity: sha512-10RPdsz0UUrRL1NZE0ejTkucnclYSgXp5q+tB5SWx2qeG2ZJQJyymgAhwKy73yiL/13btfB6fPr+rgbMAaZIAQ==,
+      }
+    peerDependencies:
+      react: ^16.8.3 || ^17
+      react-dom: "*"
+      react-native: "*"
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      "@babel/runtime": 7.17.2
+      "@types/react-redux": 7.1.23
+      hoist-non-react-statics: 3.3.2
+      loose-envify: 1.4.0
+      prop-types: 15.8.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-is: 17.0.2
+    dev: false
 
   /react-refresh/0.11.0:
     resolution:
@@ -4951,6 +5014,15 @@ packages:
       glob-regex: 0.3.2
       slash: 3.0.0
       tslib: 1.14.1
+    dev: false
+
+  /redux/4.1.2:
+    resolution:
+      {
+        integrity: sha512-SH8PglcebESbd/shgf6mii6EIoRM0zrQyjcuQ+ojmfxjTtE0z9Y8pa62iA/OJ58qjP6j27uyW4kUF4jl/jd6sw==,
+      }
+    dependencies:
+      "@babel/runtime": 7.17.2
     dev: false
 
   /regenerate-unicode-properties/10.0.1:

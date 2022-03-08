@@ -1,10 +1,11 @@
+import { BrowserRouter } from "react-router-dom";
 import TheLayout from "./views/pages/TheLayout";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <TheLayout />
-    </div>
+    </BrowserRouter>
   );
 }
 

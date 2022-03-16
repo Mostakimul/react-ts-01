@@ -1,6 +1,7 @@
+import { cartActionType } from "./../actions/cartAction";
 import { cartActionTypes } from "./../types";
 
-function cartReducer(state: IProduct[] = [], action: any) {
+function cartReducer(state: IProduct[] = [], action: cartActionType) {
   switch (action.type) {
     case cartActionTypes.ADD_TO_CART:
       return [...state, action.payload];

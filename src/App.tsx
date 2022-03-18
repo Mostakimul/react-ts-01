@@ -1,14 +1,17 @@
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import store from "redux/store";
+import { PersistGate } from "redux-persist/integration/react";
+import store, { persistor } from "redux/store";
 import TheLayout from "./views/pages/TheLayout";
 
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
-        <TheLayout />
-      </BrowserRouter>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <TheLayout />
+        </BrowserRouter>
+      </PersistGate>
     </Provider>
   );
 }

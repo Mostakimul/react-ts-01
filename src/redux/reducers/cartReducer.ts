@@ -1,5 +1,4 @@
-import { cartActionType } from "./../actions/cartAction";
-import { cartActionTypes } from "./../types";
+import { cartActionType, cartActionTypes } from "./../types";
 
 function cartReducer(state: IProduct[] = [], action: cartActionType) {
   switch (action.type) {

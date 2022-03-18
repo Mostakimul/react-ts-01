@@ -1,15 +1,12 @@
 import { useForm } from "react-hook-form";
-
-interface ILoginForm {
-  email: string;
-  password: string;
-}
+import { useDispatch } from "react-redux";
+import login from "redux/actions/authAction";
 
 const Login = () => {
-  const { handleSubmit, register } = useForm<ILoginForm>();
-
-  const handleLogin = (data: ILoginForm) => {
-    console.log(data);
+  const { handleSubmit, register } = useForm<ILoginData>();
+  const dispatch = useDispatch();
+  const handleLogin = (data: ILoginData) => {
+    dispatch(login(data));
   };
 
   return (
